@@ -275,7 +275,7 @@ function openSingleProjectModel(project) {
                    .map(
                      (image, index) => `
                    <div class="swiper-slide">
-                     <img class="w-full h-[300px]  object-cover" src="${image}" alt="${
+                     <img class="w-full h-[300px] object-cover" src="${image}" alt="${
                        parsedProject.projectName
                      } image ${index + 1}" />
                    </div>`
