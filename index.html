@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" style="font-family: serif" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- description tag -->
+    <meta
+      name="description"
+      content="نحن في مصنع أنظمة ناد ملتزمون بتصميم وتصنيع أنظمة الألمنيوم والزجاج والمعادن المعمارية عالية الجودة في المملكة العربية السعودية. نقدم خدمات متخصصة في تصنيع وتركيب وصيانة الألمنيوم، وتوفير حلول زجاجية متكاملة مثل الزجاج المقاوم للكسر والزجاج العازل، بالإضافة إلى الخدمات التخصصية في مجال الأعمال المعدنية مثل القطع والتشكيل واللحام."
+    />
+    <!-- keywords tag -->
+    <meta
+      name="keywords"
+      content="مصنع أنظمة ناد, أنظمة الألمنيوم, أنظمة الزجاج, المعادن المعمارية, تصميم, تصنيع, تركيب, جودة, السعودية, الألمنيوم, الزجاج, الأعمال المعدنية, صيانة, الزجاج المقاوم للكسر, الزجاج العازل"
+    />
+    <!-- link logo for website -->
+    <link
+      rel="shortcut icon"
+      href="./images/logo (1).png"
+      type="image/x-icon"
+    />
+    <!-- tailwind file -->
+    <link rel="stylesheet" href="./css/output.css" />
+    <!-- style css file -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- fontawesome icons files -->
+    <link rel="stylesheet" href="./css/" />
+    <!-- fontawesome icons files -->
+    <link rel="stylesheet" href="css/all.css" />
+    <!-- Swiper's CSS -->
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css" />
+    <!-- link aos scroll animation -->
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+    <!-- title -->
+    <title>مصنع ناد</title>
+  </head>
+  <body>
+    <main class="main bg-[var(--light-color)] h-auto">
+      <!-- header -->
+      <header
+        class="header bg-[var(--light-color)] z-10 top-0 left-0 w-full fixed"
+      >
+        <div class="container mx-auto px-5 h-full">
+          <div class="flex items-center justify-between py-2">
+            <div class="child header-logo flex items-center">
+              <div
+                class="bar-icon text-2xl cursor-pointer me-5 block md:hidden"
+              >
+                <i
+                  onclick="toggleHeaderMenu(true)"
+                  class="fa-solid fa-bars-staggered text-slate-600"
+                ></i>
+              </div>
+              <a href="#" class="text-2xl font-bold text-red-700 md:text-3xl">
+                <img
+                  src="./images/logo (1).png"
+                  class="h-[80px]"
+                  loading="lazy"
+                  alt="logo"
+                />
+              </a>
+            </div>
+            <div class="child header-links hidden md:block">
+              <ul class="flex items-center text-white">
+                <li class="me-10">
+                  <a
+                    href="#"
+                    class="text-2xl text-slate-600 transition hover:text-slate-900"
+                    >الصفحة الرئيسية</a
+                  >
+                </li>
+                <li class="me-10">
+                  <a
+                    href="#about-us"
+                    class="text-2xl text-slate-600 transition hover:text-slate-900"
+                    >من نحن</a
+                  >
+                </li>
+                <li class="me-10">
+                  <a
+                    href="#serices"
+                    class="text-2xl text-slate-600 transition hover:text-slate-900"
+                    >خدماتنا</a
+                  >
+                </li>
+                <li class="me-10">
+                  <a
+                    href="#vision"
+                    class="text-2xl text-slate-600 transition hover:text-slate-900"
+                    >رؤيتنا</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#projects"
+                    class="text-2xl text-slate-600 transition hover:text-slate-900"
+                    >مشاريعنا</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="child header-contact-links flex items-center">
+              <div class="me-5">
+                <a
+                  target="_blank"
+                  class="border border-slate-600 w-[30px] h-[30px] rounded-full text-slate-600 text-1xl flex items-center justify-center transition md:text-2xl md:w-[40px] md:h-[40px] hover:bg-white hover:text-[#3b5998] hover:border-0"
+                  href="https://www.facebook.com/profile.php?id=61555804843129&mibextid=ZbWKwL"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+              </div>
+              <div class="me-5">
+                <a
+                  target="_blank"
+                  class="border border-slate-600 w-[30px] h-[30px] rounded-full text-slate-600 text-1xl flex items-center justify-center transition md:text-2xl md:w-[40px] md:h-[40px] hover:bg-white hover:text-[#55acee] hover:border-0"
+                  href="https://x.com/NadFactory?t=vmLWbSWzIuWQi07MSoEW1w&s=08"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+              </div>
+              <div>
+                <a
+                  target="_blank"
+                  class="border border-slate-600 w-[30px] h-[30px] rounded-full text-slate-600 text-1xl flex items-center justify-center transition md:text-2xl md:w-[40px] md:h-[40px] hover:bg-white hover:text-[#dd4b39] hover:border-0"
+                  href="mailto:nadfactory@gmail.com"
+                  ><i class="fa-brands fa-google"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- hero section -->
+      <section
+        class="hero-section h-screen bg-[url(../images/hero-bg-image.jpg)] bg-right bg-no-repeat bg-cover relative"
+      >
+        <div
+          class="overlay w-full h-full bg-black/40 absolute left-0 top-0 z-0"
+        ></div>
+        <div
+          class="container mx-auto flex items-center justify-center px-5 h-full relative"
+        >
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            class="w-full mx-auto border-white border-4 p-5 text-center md:w-6/12"
+          >
+            <h1 class="text-5xl text-white font-bold mb-10 md:text-6xl">
+              مصنع ناد
+            </h1>
+            <p class="text-2xl text-white mb-12 md:text-3xl">
+              مصنع ناد للالمونيوم و الزجاج الابواب الخشبية و الاعمال المعدنية
+            </p>
+            <div class="flex justify-center">
+              <a
+                href="mailto:nadfactory@gmail.com"
+                class="block w-fit py-3 px-6 text-2xl text-slate-600 bg-[var(--light-color)] transition hover:bg-[var(--red-color)] hover:text-white"
+                aria-label="contact-btn"
+              >
+                تواصل معنا
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- about us section -->
+      <section
+        id="about-us"
+        class="about-us-section py-20 bg-[var(--gray-color)]"
+      >
+        <div class="container mx-auto h-full px-5 relative">
+          <div class="w-full text-center text-white">
+            <h2 data-aos="fade-up" class="font-bold text-5xl mb-10 md:text-6xl">
+              اهلا بكم في مصنع <span class="text-[var(--red-color)]">باد!</span>
+            </h2>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              class="text-2xl md:text-3xl"
+            >
+              مصنع أنظمة ناد للصناعة، أحد المنشآت الرائدة في مجال تصميم وتصنع
+              وتركيب أنظمة الألمنيوم والزجاج والمعادن المعمارية عالية الجودة في
+              المملكة العربية السعودية.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- service section -->
+      <section id="serices" class="service-section py-20">
+        <div class="container mx-auto px-5 h-full">
+          <div
+            class="flex text-center items-start flex-col flex-wrap md:flex-row"
+          >
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              class="child mb-5 w-full md:w-4/12 md:mb-0"
+            >
+              <div class="icon mb-3 text-[var(--red-color)] text-4xl">
+                <i class="fa-solid fa-bacon"></i>
+              </div>
+              <div class="title font-bold mb-5 text-3xl md:text-4xl">
+                جميع أعمال الالمنيوم
+              </div>
+              <div>
+                <p class="text-slate-600 text-2xl md:text-3xl">
+                  نقدم خدمات متخصصة في مجال الألمنيوم، بما في ذلك التصنيع
+                  والتركيب والصيانة.
+                </p>
+              </div>
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              class="child mb-5 w-full md:w-4/12 md:mb-0"
+            >
+              <div class="icon mb-3 text-[var(--red-color)] text-4xl">
+                <i class="fa-brands fa-atlassian"></i>
+              </div>
+              <div class="title font-bold mb-5 text-3xl md:text-4xl">
+                الزجاج
+              </div>
+              <div>
+                <p class="text-slate-600 text-2xl md:text-3xl">
+                  توفير حلول زجاجية متكاملة لمشاريعكم، بما في ذلك الزجاج المقاوم
+                  للكسر والزجاج العازل.
+                </p>
+              </div>
+            </div>
+
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              class="child mb-5 w-full md:w-4/12 md:mb-0"
+            >
+              <div class="icon mb-3 text-[var(--red-color)] text-4xl">
+                <i class="fa-solid fa-oil-well"></i>
+              </div>
+              <div class="title font-bold mb-5 text-3xl md:text-4xl">
+                الأعمال المعدنية
+              </div>
+              <div>
+                <p class="text-slate-600 text-2xl md:text-3xl">
+                  خدمات تخصصية في مجال الأعمال المعدنية، بما في ذلك القطع
+                  والتشكيل واللحام.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- our vision section -->
+      <section id="vision" class="our-vision-section bg-[var(--gray-color)]">
+        <div class="flex flex-wrap flex-col md:flex-row">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            class="child w-full text-white px-5 py-20 md:p-10 md:w-6/12"
+          >
+            <div class="text-5xl font-bold mb-10 md:text-6xl">
+              الرؤية والرسالة
+            </div>
+            <div>
+              <p class="text-2xl">
+                نتطلع في مصنع أنظمة باد للصناعة لتثبيت موقعنا كأحد أفضل العلامات
+                التجار ية ذات السمعة الموثوق في مجال أعمال ومقاولات الالمونيوم
+                والزجاج والحديد في المملكة ودول مجلس التعاون الخليجي من خلال
+                الالتزام بمعايير الجودة والمناسة البناءة وتلبية متطلبات وخيارات
+                العملاء علي أكمل وجه ضمن منظومة متقدمة واستراتيجية تسويقية فعالة
+                وتوسيع قاعدة عملائنا بما يواكب احتياج السوق.
+              </p>
+            </div>
+          </div>
+          <div
+            class="child w-full h-[400px] bg-[url(../images/our-vision-image.jpg)] bg-left bg-no-repeat bg-cover md:w-6/12 md:h-auto"
+          ></div>
+        </div>
+      </section>
+      <!-- projects section -->
+      <section
+        id="projects"
+        class="projects-section bg-[var(--light-color)] overflow-hidden py-20 w-full"
+      >
+        <div class="container px-5 mx-auto h-full">
+          <div class="project-title">
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              class="text-5xl font-bold text-[var(--red-color)] mb-10 text-center md:text-6xl"
+            >
+              مشاريعنا
+            </h1>
+          </div>
+          <div class="projects-cards flex flex-wrap"></div>
+        </div>
+      </section>
+      <!-- footer section -->
+      <section
+        class="footer bg-[var(--light-color)] py-10 border-t-gray-300 border-t-2"
+      >
+        <div class="container mx-auto px-5 h-full">
+          <div class="flex items-center justify-between flex-wrap">
+            <div class="child footer-links w-full mb-5 md:mb-0 md:w-8/12">
+              <ul class="flex items-center text-white flex-wrap">
+                <li class="px-5 border-l-gray-400 border">
+                  <a
+                    href="#"
+                    class="text-2xl text-slate-600 transition hover:text-slate-900"
+                    >الصفحة الرئيسية</a
+                  >
+                </li>
+                <li class="px-5 border-l-gray-400 border">
+                  <a
+                    href="#about-us"
+                    class="text-2xl text-slate-600 transition hover:text-slate-900"
+                    >من نحن</a
+                  >
+                </li>
+                <li class="px-5 border-l-gray-400 border">
+                  <a
+                    href="#serices"
+                    class="text-2xl text-slate-600 transition hover:text-slate-900"
+                    >خدماتنا</a
+                  >
+                </li>
+                <li class="px-5 border-l-gray-400 border">
+                  <a
+                    href="#vision"
+                    class="text-2xl text-slate-600 transition hover:text-slate-900"
+                    >رؤيتنا</a
+                  >
+                </li>
+                <li class="px-5">
+                  <a
+                    href="#projects"
+                    class="text-2xl text-slate-600 transition hover:text-slate-900"
+                    >مشاريعنا</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div
+              class="child text-slate-600 text-2xl ps-5 w-full md:text-center md:w-4/12"
+            >
+              © جميع الحقوق محفوظة مصنع ناد
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- single project model -->
+      <section
+        class="single-project-model hidden fixed bg-black/45 top-0 left-0 w-full h-[100vh] z-[99999]"
+      ></section>
+    </main>
+    <!-- Swiper JS -->
+    <script src="node_modules/swiper/swiper-bundle.min.js"></script>
+    <!-- main script -->
+    <script src="js/main.js"></script>
+    <!-- Aos script -->
+    <script src="node_modules/aos/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
