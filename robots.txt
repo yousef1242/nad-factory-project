@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: 
-Disallow: /search
-Allow: /
-Sitemap: https://yousef1242.github.io/nad-factory-project/sitemap.xml

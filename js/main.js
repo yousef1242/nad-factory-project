@@ -2,7 +2,9 @@ const barIcon = document.querySelector(".bar-icon");
 const headerLinks = document.querySelector(".header-links");
 const headerLinksUl = document.querySelector(".header-links ul");
 const projectsCards = document.querySelector(".projects-cards");
-const projectModel = document.querySelector(".single-project-model");
+const creditsCards = document.querySelector(".credits-cards");
+const partnersCards = document.querySelector(".partners-cards");
+const singelModel = document.querySelector(".single-model");
 
 // toggle header menu
 const toggleHeaderMenu = (isOpen) => {
@@ -46,12 +48,12 @@ const projects = [
     contractor: "الراجحي للتعمير",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "./images/project-1- (1)..webp",
-      "./images/project-1- (2)..webp",
-      "./images/project-1- (3)..webp",
-      "./images/project-1- (4)..webp",
-      "./images/project-1- (5)..webp",
-      "./images/project-1- (6)..webp",
+      "images/project-1- (1)..webp",
+      "images/project-1- (2)..webp",
+      "images/project-1- (3)..webp",
+      "images/project-1- (4)..webp",
+      "images/project-1- (5)..webp",
+      "images/project-1- (6)..webp",
     ],
   },
   {
@@ -60,10 +62,10 @@ const projects = [
     contractor: "الراجحي للتعمير",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "./images/project-2- (1)..webp",
-      "./images/project-2- (2)..webp",
-      "./images/project-2- (3)..webp",
-      "./images/project-2- (4)..webp",
+      "images/project-2- (1)..webp",
+      "images/project-2- (2)..webp",
+      "images/project-2- (3)..webp",
+      "images/project-2- (4)..webp",
     ],
   },
   {
@@ -72,10 +74,10 @@ const projects = [
     contractor: "الراجحي للتعمير",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "./images/project-3- (1)..webp",
-      "./images/project-3- (2)..webp",
-      "./images/project-3- (3)..webp",
-      "./images/project-3- (4)..webp",
+      "images/project-3- (1)..webp",
+      "images/project-3- (2)..webp",
+      "images/project-3- (3)..webp",
+      "images/project-3- (4)..webp",
     ],
   },
   {
@@ -84,12 +86,12 @@ const projects = [
     contractor: "الراجحي للتعمير",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "./images/project-4- (1)..webp",
-      "./images/project-4- (2)..webp",
-      "./images/project-4- (3)..webp",
-      "./images/project-4- (4)..webp",
-      "./images/project-4- (5)..webp",
-      "./images/project-4- (6)..webp",
+      "images/project-4- (1)..webp",
+      "images/project-4- (2)..webp",
+      "images/project-4- (3)..webp",
+      "images/project-4- (4)..webp",
+      "images/project-4- (5)..webp",
+      "images/project-4- (6)..webp",
     ],
   },
   {
@@ -98,12 +100,12 @@ const projects = [
     contractor: "الراجحي للتعمير",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "./images/project-5- (1)..webp",
-      "./images/project-5- (2)..webp",
-      "./images/project-5- (3)..webp",
-      "./images/project-5- (4)..webp",
-      "./images/project-5- (5)..webp",
-      "./images/project-5- (6)..webp",
+      "images/project-5- (1)..webp",
+      "images/project-5- (2)..webp",
+      "images/project-5- (3)..webp",
+      "images/project-5- (4)..webp",
+      "images/project-5- (5)..webp",
+      "images/project-5- (6)..webp",
     ],
   },
   {
@@ -112,9 +114,9 @@ const projects = [
     contractor: "شركة عبدالله السيد للمقاولات العامة",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "./images/project-6- (1)..webp",
-      "./images/project-6- (2)..webp",
-      "./images/project-6- (3)..webp",
+      "images/project-6- (1)..webp",
+      "images/project-6- (2)..webp",
+      "images/project-6- (3)..webp",
     ],
   },
   {
@@ -122,7 +124,7 @@ const projects = [
     owner: "وزارة التجارة",
     contractor: "الشايعي للمقاولات",
     aluminum: "مصنع أنظمة ناد للصناعة",
-    images: ["./images/project-7- (1)..webp", "./images/project-7- (2)..webp"],
+    images: ["images/project-7- (1)..webp", "images/project-7- (2)..webp"],
   },
   {
     projectName: "زجاج فاير ريتد مضاد للرصاص",
@@ -130,11 +132,11 @@ const projects = [
     contractor: "مجموعة النصبان للمقاولات",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "./images/project-8- (1)..webp",
-      "./images/project-8- (2)..webp",
-      "./images/project-8- (3)..webp",
-      "./images/project-8- (4)..webp",
-      "./images/project-8- (5)..webp",
+      "images/project-8- (1)..webp",
+      "images/project-8- (2)..webp",
+      "images/project-8- (3)..webp",
+      "images/project-8- (4)..webp",
+      "images/project-8- (5)..webp",
     ],
   },
   {
@@ -143,11 +145,11 @@ const projects = [
     contractor: "شمال الخليج",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "./images/project-9- (1)..webp",
-      "./images/project-9- (2)..webp",
-      "./images/project-9- (3)..webp",
-      "./images/project-9- (4)..webp",
-      "./images/project-9- (5)..webp",
+      "images/project-9- (1)..webp",
+      "images/project-9- (2)..webp",
+      "images/project-9- (3)..webp",
+      "images/project-9- (4)..webp",
+      "images/project-9- (5)..webp",
     ],
   },
 ];
@@ -175,7 +177,7 @@ const addProjectsCards = () => {
       "flex-row"
     );
 
-    innerDiv.addEventListener("click", () => openSingleProjectModel(project));
+    innerDiv.addEventListener("click", () => openSingleModel(project));
 
     const projectCardImage = document.createElement("div");
     projectCardImage.classList.add(
@@ -257,17 +259,17 @@ const addProjectsCards = () => {
 addProjectsCards();
 
 // single project model
-function openSingleProjectModel(project) {
+function openSingleModel(project) {
   try {
     const parsedProject = JSON.parse(JSON.stringify(project));
     if (parsedProject) {
-      projectModel.classList.remove("hidden");
-      projectModel.classList.add("block");
-      projectModel.innerHTML = `
+      singelModel.classList.remove("hidden");
+      singelModel.classList.add("block");
+      singelModel.innerHTML = `
          <div class="container mx-auto px-2 h-full flex justify-center items-center">
-           <section class="single-project-model-content w-[500px] bg-white shadow-md rounded-lg overflow-hidden">
+           <div class="single-project-model-content w-[500px] bg-white shadow-md rounded-lg overflow-hidden">
              <div class="single-project-images swiper mySwiper">
-               <div onClick="closeSingleProjectModel()" class="absolute z-[9] w-[25px] h-[25px] flex justify-center items-center bg-white rounded-full cursor-pointer text-center right-[10px] top-[10px]">
+               <div onClick="closeSingleModel()" class="absolute z-[9] w-[25px] h-[25px] flex justify-center items-center bg-white rounded-full cursor-pointer text-center right-[10px] top-[10px]">
                  <i class="fa-solid fa-xmark"></i>
                </div>
                <div class="swiper-wrapper">
@@ -291,7 +293,7 @@ function openSingleProjectModel(project) {
                  parsedProject.projectName
                }</h4>
              </div>
-           </section>
+           </div>
          </div>`;
 
       const translations = {
@@ -348,8 +350,223 @@ function openSingleProjectModel(project) {
   }
 }
 
-// close single project model
-function closeSingleProjectModel() {
-  projectModel.classList.add("hidden");
-  projectModel.classList.remove("block");
+// credits
+const credits = [
+  {
+    title: "إعتمادات وزارة التجارة",
+    images: [
+      "images/credit-1- (1).jpg",
+      "images/credit-1- (2).jpg",
+      "images/credit-1- (3).jpg",
+      "images/credit-1- (4).jpg",
+      "images/credit-1- (5).jpg",
+    ],
+  },
+  {
+    title: "إعتمادات وزارة التربية والتعليم",
+    images: ["images/credit-2- (1).jpg", "images/credit-2- (2).jpg"],
+  },
+  { title: "إعتمادات وزارة الداخلية", images: ["images/credit-3-(1).jpg"] },
+  {
+    title: "إعتمادات وزارة الصحة",
+    images: [
+      "images/credit-4- (1).jpg",
+      "images/credit-4- (2).jpg",
+      "images/credit-4- (3).jpg",
+      "images/credit-4- (4).jpg",
+      "images/credit-4- (5).jpg",
+      "images/credit-4- (6).jpg",
+      "images/credit-4- (7).jpg",
+      "images/credit-4- (8).jpg",
+      "images/credit-4- (9).jpg",
+      "images/credit-4- (10).jpg",
+    ],
+  },
+  {
+    title: "إعتمادات شركة TBC",
+    images: [
+      "images/credit-5- (1).jpg",
+      "images/credit-5- (2).jpg",
+      "images/credit-5- (3).jpg",
+    ],
+  },
+  {
+    title: "معتمد من قبل الخدمات الطبية القوات المسلحة",
+    images: [
+      "images/credit-6- (1).jpg",
+      "images/credit-6- (2).jpg",
+      "images/credit-6- (3).jpg",
+      "images/credit-6- (4).jpg",
+    ],
+  },
+  {
+    title: "إعتمادات وزارة البيئة والمياة الزراعية",
+    images: ["images/credit-7- (1).jpg", "images/credit-7- (2).jpg"],
+  },
+];
+
+// set credits cards
+const addCreditsCards = () => {
+  credits.forEach((credit) => {
+    const creditCard = document.createElement("div");
+    creditCard.setAttribute("data-aos", "fade-up");
+    creditCard.setAttribute("data-aos-duration", "1500");
+    creditCard.classList.add(
+      "child",
+      "mb-5",
+      "p-2",
+      "w-6/12",
+      "md:w-4/12",
+      "lg:w-3/12",
+      "xl:w-2/12"
+    );
+
+    const innerDiv = document.createElement("div");
+    innerDiv.classList.add(
+      "w-full",
+      "cursor-pointer",
+      "bg-white",
+      "h-full",
+      "shadow-md",
+      "rounded-lg",
+      "overflow-hidden",
+      "relative"
+    );
+
+    innerDiv.addEventListener("click", () => openSingleCreditModel(credit));
+
+    const creditCardImageDiv = document.createElement("div");
+
+    const creditCardImage = document.createElement("img");
+    creditCardImage.setAttribute("src", credit.images[0]);
+    creditCardImage.setAttribute("loading", "lazy");
+    creditCardImage.setAttribute("alt", credit.title + "image");
+
+    creditCardImageDiv.append(creditCardImage);
+
+    const creditCardContent = document.createElement("div");
+    creditCardContent.classList.add(
+      "credit-card-content",
+      "absolute",
+      "bg-black/40",
+      "justify-center",
+      "items-center",
+      "flex",
+      "w-full",
+      "h-full",
+      "top-0",
+      "left-0"
+    );
+
+    const creditTitle = document.createElement("h4");
+    creditTitle.classList.add(
+      "text-white",
+      "text-center",
+      "font-bold",
+      "text-2xl",
+      "xl:text-3xl"
+    );
+    creditTitle.textContent = credit["title"];
+
+    creditCardContent.appendChild(creditTitle);
+
+    innerDiv.appendChild(creditCardImageDiv);
+    innerDiv.appendChild(creditCardContent);
+
+    creditCard.appendChild(innerDiv);
+    creditsCards.appendChild(creditCard);
+  });
+};
+
+addCreditsCards();
+
+// single credit model
+function openSingleCreditModel(credit) {
+  try {
+    const parsedCredit = JSON.parse(JSON.stringify(credit));
+    if (parsedCredit) {
+      singelModel.classList.remove("hidden");
+      singelModel.classList.add("block");
+      singelModel.innerHTML = `
+         <div class="container mx-auto p-5 h-full flex justify-center items-center sm:items-start">
+           <div class="single-credit-model-content rounded-lg overflow-hidden">
+             <div class="single-credit-images swiper mySwiper">
+               <div onClick="closeSingleModel()" class="absolute z-[9] w-[25px] h-[25px] flex justify-center items-center bg-white rounded-full cursor-pointer text-center right-[10px] top-[10px]">
+                 <i class="fa-solid fa-xmark"></i>
+               </div>
+               <div class="swiper-wrapper">
+                 ${parsedCredit.images
+                   .map(
+                     (image) => `
+                   <div class="swiper-slide">
+                     <img class="w-full h-full object-cover" loading="lazy" src="${image}" alt="${parsedCredit.title} image" />
+                   </div>`
+                   )
+                   .join("")}
+               </div>
+               <div class="swiper-button-next credit-swiper-btn"></div>
+               <div class="swiper-button-prev credit-swiper-btn"></div>
+               <div class="swiper-pagination"></div>
+             </div>
+           </div>
+         </div>`;
+
+      new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    } else {
+      alert("Something went wrong, please try again");
+    }
+  } catch (error) {
+    console.error("Error parsing project data:", error);
+    alert("Something went wrong, please try again");
+  }
 }
+
+// close single project model
+function closeSingleModel() {
+  singelModel.classList.add("hidden");
+  singelModel.classList.remove("block");
+}
+// partners data
+const partnersData = [
+  "images/partners- (1).png",
+  "images/partners- (2).png",
+  "images/partners- (3).png",
+  "images/partners- (4).png",
+  "images/partners- (5).png",
+  "images/partners- (6).png",
+  "images/partners- (7).png",
+  "images/partners- (8).png",
+  "images/partners- (9).png",
+  "images/partners- (10).png",
+  "images/partners- (11).png",
+  "images/partners- (12).png",
+];
+
+// set partners cards
+const setPartnersCards = () => {
+  partnersData.map(
+    (partner) =>
+      (partnersCards.innerHTML += `
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              class="child p-2 w-6/12 md:w-4/12 lg:w-3/12">
+            <div class="w-full flex justify-center">
+              <img loading="lazy" src="${partner}" alt="Nad trusted partner">
+              </div>
+            </div>`)
+  );
+};
+setPartnersCards();

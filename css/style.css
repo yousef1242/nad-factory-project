@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-    --red-color: #ef1b31;
-    --light-color: #e8e8e8;
-    --gray-color:#222c35;
+:root {
+  --red-color: #ef1b31;
+  --light-color: #e8e8e8;
+  --gray-color: #222c35;
+}
+
+.credit-swiper-btn {
+  position: fixed !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--red-color)!important;
 }
