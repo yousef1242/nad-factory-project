@@ -14,7 +14,7 @@ const toggleHeaderMenu = (isOpen) => {
     headerLinks.classList.add(
       "absolute",
       "left-0",
-      "top-[96px]",
+      "top-[95px]",
       "bg-[var(--light-color)]",
       "w-full",
       "z-20"
@@ -24,7 +24,7 @@ const toggleHeaderMenu = (isOpen) => {
     const listLiItems = headerLinksUl.querySelectorAll("li");
     listLiItems.forEach((li) => {
       li.classList.remove("me-10");
-      li.classList.add("mb-10");
+      li.classList.add("mb-5");
     });
   } else if (!isOpen) {
     barIcon.innerHTML = `<i onclick="toggleHeaderMenu(${true})" class="fa-solid fa-bars-staggered text-slate-600"></i>`;
@@ -160,21 +160,14 @@ const addProjectsCards = () => {
     const projectCard = document.createElement("div");
     projectCard.setAttribute("data-aos", "fade-up");
     projectCard.setAttribute("data-aos-duration", "1500");
-    projectCard.classList.add("child", "p-2", "w-full", "md:w-6/12");
+    projectCard.classList.add("child", "p-2", "w-full", "md:w-4/12");
 
     const innerDiv = document.createElement("div");
     innerDiv.classList.add(
       "w-full",
       "cursor-pointer",
       "bg-white",
-      "h-full",
-      "md:h-[200px]",
-      "shadow-md",
-      "flex",
-      "flex-wrap",
-      "rounded-lg",
-      "overflow-hidden",
-      "flex-row"
+      "h-full"
     );
 
     innerDiv.addEventListener("click", () => openSingleModel(project));
@@ -182,79 +175,47 @@ const addProjectsCards = () => {
     const projectCardImage = document.createElement("div");
     projectCardImage.classList.add(
       "project-card-image",
+      "relative",
       "w-full",
-      "h-[240px]",
-      "md:h-[200px]",
-      "md:w-4/12"
+      "h-[240px]"
     );
+    
     const image = document.createElement("img");
     image.style.objectFit = "cover";
     image.classList.add("h-full", "w-full");
     image.setAttribute("loading", "lazy");
     image.setAttribute("src", project.images[0]);
     image.setAttribute("alt", `${project["projectName"]} image`);
-    projectCardImage.appendChild(image);
-
-    const projectCardContent = document.createElement("div");
-    projectCardContent.classList.add(
-      "project-card-content",
+    
+    const overlay = document.createElement("div");
+    overlay.classList.add(
+      "overlay",
+      "absolute",
+      "top-0",
+      "left-0",
       "w-full",
+      "h-full",
+      "bg-black",
+      "bg-opacity-50",
+      "backdrop-blur-sm",
       "flex",
+      "items-center",
       "justify-center",
-      "p-3",
-      "flex-col",
-      "md:w-8/12"
-    );
-
-    const projectName = document.createElement("h4");
-    projectName.classList.add(
-      "text-slate-800",
+      "text-white",
       "font-bold",
-      "mb-4",
-      "text-2xl",
-      "xl:text-3xl"
+      "text-xl"
     );
-    projectName.textContent = project["projectName"];
+    overlay.textContent = project["projectName"];
 
-    projectCardContent.appendChild(projectName);
-
-    const translations = {
-      owner: "المالك",
-      contractor: "المقاول",
-      aluminum: "الألمنيوم",
-    };
-
-    for (const property in project) {
-      if (property !== "images" && property !== "projectName") {
-        const propertyContainer = document.createElement("div");
-        propertyContainer.classList.add("flex", "items-center", "mb-2");
-
-        const propertyName = document.createElement("p");
-        propertyName.classList.add(
-          "text-slate-600",
-          "text-lg",
-          "font-semibold",
-          "mr-2"
-        );
-        propertyName.textContent = `${translations[property]}:`;
-
-        const propertyValue = document.createElement("p");
-        propertyValue.classList.add("text-slate-700", "text-lg");
-        propertyValue.textContent = project[property];
-
-        propertyContainer.appendChild(propertyName);
-        propertyContainer.appendChild(propertyValue);
-        projectCardContent.appendChild(propertyContainer);
-      }
-    }
+    projectCardImage.appendChild(image);
+    projectCardImage.appendChild(overlay);
 
     innerDiv.appendChild(projectCardImage);
-    innerDiv.appendChild(projectCardContent);
-
     projectCard.appendChild(innerDiv);
     projectsCards.appendChild(projectCard);
   });
 };
+
 
 addProjectsCards();
 
@@ -417,8 +378,7 @@ const addCreditsCards = () => {
       "p-2",
       "w-6/12",
       "md:w-4/12",
-      "lg:w-3/12",
-      "xl:w-2/12"
+      "lg:w-3/12"
     );
 
     const innerDiv = document.createElement("div");
@@ -428,55 +388,51 @@ const addCreditsCards = () => {
       "bg-white",
       "h-full",
       "shadow-md",
-      "rounded-lg",
-      "overflow-hidden",
       "relative"
     );
 
     innerDiv.addEventListener("click", () => openSingleCreditModel(credit));
 
     const creditCardImageDiv = document.createElement("div");
+    creditCardImageDiv.classList.add("credit-card-image", "relative", "w-full", "h-[240px]");
 
     const creditCardImage = document.createElement("img");
     creditCardImage.setAttribute("src", credit.images[0]);
     creditCardImage.setAttribute("loading", "lazy");
-    creditCardImage.setAttribute("alt", credit.title + "image");
+    creditCardImage.setAttribute("alt", credit.title + " image");
+    creditCardImage.classList.add("h-full", "w-full", "object-cover");
 
-    creditCardImageDiv.append(creditCardImage);
-
-    const creditCardContent = document.createElement("div");
-    creditCardContent.classList.add(
-      "credit-card-content",
+    const overlay = document.createElement("div");
+    overlay.classList.add(
+      "overlay",
       "absolute",
-      "bg-black/40",
-      "justify-center",
-      "items-center",
-      "flex",
+      "top-0",
+      "left-0",
       "w-full",
       "h-full",
-      "top-0",
-      "left-0"
-    );
-
-    const creditTitle = document.createElement("h4");
-    creditTitle.classList.add(
+      "bg-black",
+      "bg-opacity-50",
+      "backdrop-blur-sm",
+      "flex",
+      "items-center",
+      "justify-center",
       "text-white",
-      "text-center",
       "font-bold",
-      "text-2xl",
-      "xl:text-3xl"
+      "text-xl",
+      "text-center",
+      "p-2"
     );
-    creditTitle.textContent = credit["title"];
+    overlay.textContent = credit["title"];
 
-    creditCardContent.appendChild(creditTitle);
+    creditCardImageDiv.appendChild(creditCardImage);
+    creditCardImageDiv.appendChild(overlay);
 
     innerDiv.appendChild(creditCardImageDiv);
-    innerDiv.appendChild(creditCardContent);
-
     creditCard.appendChild(innerDiv);
     creditsCards.appendChild(creditCard);
   });
 };
+
 
 addCreditsCards();
 
@@ -562,9 +518,9 @@ const setPartnersCards = () => {
             <div
               data-aos="fade-up"
               data-aos-duration="1500"
-              class="child p-2 w-6/12 md:w-4/12 lg:w-3/12">
+              class="child p-2 w-6/12 md:w-3/12 lg:w-3/12">
             <div class="w-full flex justify-center">
-              <img loading="lazy" src="${partner}" alt="Nad trusted partner">
+              <img loading="lazy" class="w-[130px] h-[130px]" src="${partner}" alt="Nad trusted partner">
               </div>
             </div>`)
   );
