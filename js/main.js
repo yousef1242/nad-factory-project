@@ -6,6 +6,21 @@ const creditsCards = document.querySelector(".credits-cards");
 const partnersCards = document.querySelector(".partners-cards");
 const singelModel = document.querySelector(".single-model");
 
+function getLanguageFromURL() {
+  const url = window.location.href;
+  if (url.includes("/en")) {
+    return "en";
+  } else if (url.includes("/ar")) {
+    return "ar";
+  } else {
+    // Default to Arabic if language is not specified in the URL
+    return "ar";
+  }
+}
+
+// Select the appropriate projects data based on the URL language
+const lang = getLanguageFromURL();
+
 // toggle header menu
 const toggleHeaderMenu = (isOpen) => {
   if (isOpen) {
@@ -15,7 +30,7 @@ const toggleHeaderMenu = (isOpen) => {
       "absolute",
       "left-0",
       "top-[95px]",
-      "bg-[var(--light-color)]",
+      "bg-light-color",
       "w-full",
       "z-20"
     );
@@ -33,27 +48,27 @@ const toggleHeaderMenu = (isOpen) => {
       "absolute",
       "left-0",
       "top-[96px]",
-      "bg-[var(--light-color)]",
+      "bg-light-color",
       "w-full",
       "z-20"
     );
   }
 };
 
-// projects data
-const projects = [
+// projects data ar
+const projectsAR = [
   {
     projectName: "مدرسة بدر",
     owner: "شركة تطوير المباني التعليم TBC",
     contractor: "الراجحي للتعمير",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "images/project-1- (1)..webp",
-      "images/project-1- (2)..webp",
-      "images/project-1- (3)..webp",
-      "images/project-1- (4)..webp",
-      "images/project-1- (5)..webp",
-      "images/project-1- (6)..webp",
+      "../images/project-1- (1)..webp",
+      "../images/project-1- (2)..webp",
+      "../images/project-1- (3)..webp",
+      "../images/project-1- (4)..webp",
+      "../images/project-1- (5)..webp",
+      "../images/project-1- (6)..webp",
     ],
   },
   {
@@ -62,10 +77,10 @@ const projects = [
     contractor: "الراجحي للتعمير",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "images/project-2- (1)..webp",
-      "images/project-2- (2)..webp",
-      "images/project-2- (3)..webp",
-      "images/project-2- (4)..webp",
+      "../images/project-2- (1)..webp",
+      "../images/project-2- (2)..webp",
+      "../images/project-2- (3)..webp",
+      "../images/project-2- (4)..webp",
     ],
   },
   {
@@ -74,10 +89,10 @@ const projects = [
     contractor: "الراجحي للتعمير",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "images/project-3- (1)..webp",
-      "images/project-3- (2)..webp",
-      "images/project-3- (3)..webp",
-      "images/project-3- (4)..webp",
+      "../images/project-3- (1)..webp",
+      "../images/project-3- (2)..webp",
+      "../images/project-3- (3)..webp",
+      "../images/project-3- (4)..webp",
     ],
   },
   {
@@ -86,12 +101,12 @@ const projects = [
     contractor: "الراجحي للتعمير",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "images/project-4- (1)..webp",
-      "images/project-4- (2)..webp",
-      "images/project-4- (3)..webp",
-      "images/project-4- (4)..webp",
-      "images/project-4- (5)..webp",
-      "images/project-4- (6)..webp",
+      "../images/project-4- (1)..webp",
+      "../images/project-4- (2)..webp",
+      "../images/project-4- (3)..webp",
+      "../images/project-4- (4)..webp",
+      "../images/project-4- (5)..webp",
+      "../images/project-4- (6)..webp",
     ],
   },
   {
@@ -100,12 +115,12 @@ const projects = [
     contractor: "الراجحي للتعمير",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "images/project-5- (1)..webp",
-      "images/project-5- (2)..webp",
-      "images/project-5- (3)..webp",
-      "images/project-5- (4)..webp",
-      "images/project-5- (5)..webp",
-      "images/project-5- (6)..webp",
+      "../images/project-5- (1)..webp",
+      "../images/project-5- (2)..webp",
+      "../images/project-5- (3)..webp",
+      "../images/project-5- (4)..webp",
+      "../images/project-5- (5)..webp",
+      "../images/project-5- (6)..webp",
     ],
   },
   {
@@ -114,9 +129,9 @@ const projects = [
     contractor: "شركة عبدالله السيد للمقاولات العامة",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "images/project-6- (1)..webp",
-      "images/project-6- (2)..webp",
-      "images/project-6- (3)..webp",
+      "../images/project-6- (1)..webp",
+      "../images/project-6- (2)..webp",
+      "../images/project-6- (3)..webp",
     ],
   },
   {
@@ -124,7 +139,10 @@ const projects = [
     owner: "وزارة التجارة",
     contractor: "الشايعي للمقاولات",
     aluminum: "مصنع أنظمة ناد للصناعة",
-    images: ["images/project-7- (1)..webp", "images/project-7- (2)..webp"],
+    images: [
+      "../images/project-7- (1)..webp",
+      "../images/project-7- (2)..webp",
+    ],
   },
   {
     projectName: "زجاج فاير ريتد مضاد للرصاص",
@@ -132,11 +150,11 @@ const projects = [
     contractor: "مجموعة النصبان للمقاولات",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "images/project-8- (1)..webp",
-      "images/project-8- (2)..webp",
-      "images/project-8- (3)..webp",
-      "images/project-8- (4)..webp",
-      "images/project-8- (5)..webp",
+      "../images/project-8- (1)..webp",
+      "../images/project-8- (2)..webp",
+      "../images/project-8- (3)..webp",
+      "../images/project-8- (4)..webp",
+      "../images/project-8- (5)..webp",
     ],
   },
   {
@@ -145,14 +163,133 @@ const projects = [
     contractor: "شمال الخليج",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "images/project-9- (1)..webp",
-      "images/project-9- (2)..webp",
-      "images/project-9- (3)..webp",
-      "images/project-9- (4)..webp",
-      "images/project-9- (5)..webp",
+      "../images/project-9- (1)..webp",
+      "../images/project-9- (2)..webp",
+      "../images/project-9- (3)..webp",
+      "../images/project-9- (4)..webp",
+      "../images/project-9- (5)..webp",
     ],
   },
 ];
+
+// projects data en
+const projectsEN = [
+  {
+    projectName: "Badr School",
+    owner: "TBC Educational Building Development Company",
+    contractor: "Al Rajhi Construction",
+    aluminum: "NAD Systems Manufacturing Plant",
+    images: [
+      "../images/project-1- (1)..webp",
+      "../images/project-1- (2)..webp",
+      "../images/project-1- (3)..webp",
+      "../images/project-1- (4)..webp",
+      "../images/project-1- (5)..webp",
+      "../images/project-1- (6)..webp",
+    ],
+  },
+  {
+    projectName: "School No. 51 (Roshan)",
+    owner: "TBC Educational Building Development Company",
+    contractor: "Al Rajhi Construction",
+    aluminum: "NAD Systems Manufacturing Plant",
+    images: [
+      "../images/project-2- (1)..webp",
+      "../images/project-2- (2)..webp",
+      "../images/project-2- (3)..webp",
+      "../images/project-2- (4)..webp",
+    ],
+  },
+  {
+    projectName: "School No. 55 (Roshan)",
+    owner: "TBC Educational Building Development Company",
+    contractor: "Al Rajhi Construction",
+    aluminum: "NAD Systems Manufacturing Plant",
+    images: [
+      "../images/project-3- (1)..webp",
+      "../images/project-3- (2)..webp",
+      "../images/project-3- (3)..webp",
+      "../images/project-3- (4)..webp",
+    ],
+  },
+  {
+    projectName: "Kindergarten No. 36 (Roshan)",
+    owner: "TBC Educational Building Development Company",
+    contractor: "Al Rajhi Construction",
+    aluminum: "NAD Systems Manufacturing Plant",
+    images: [
+      "../images/project-4- (1)..webp",
+      "../images/project-4- (2)..webp",
+      "../images/project-4- (3)..webp",
+      "../images/project-4- (4)..webp",
+      "../images/project-4- (5)..webp",
+      "../images/project-4- (6)..webp",
+    ],
+  },
+  {
+    projectName: "Kindergarten No. 56 (Roshan)",
+    owner: "TBC Educational Building Development Company",
+    contractor: "Al Rajhi Construction",
+    aluminum: "NAD Systems Manufacturing Plant",
+    images: [
+      "../images/project-5- (1)..webp",
+      "../images/project-5- (2)..webp",
+      "../images/project-5- (3)..webp",
+      "../images/project-5- (4)..webp",
+      "../images/project-5- (5)..webp",
+      "../images/project-5- (6)..webp",
+    ],
+  },
+  {
+    projectName: "Onaizah Maternity and Children's Hospital, 200 Beds",
+    owner: "Ministry of Health",
+    contractor: "Abdullah Al-Sayed General Contracting Company",
+    aluminum: "NAD Systems Manufacturing Plant",
+    images: [
+      "../images/project-6- (1)..webp",
+      "../images/project-6- (2)..webp",
+      "../images/project-6- (3)..webp",
+    ],
+  },
+  {
+    projectName: "Ministry of Commerce Building - Al Ahsa",
+    owner: "Ministry of Commerce",
+    contractor: "Al Shaya Contracting",
+    aluminum: "NAD Systems Manufacturing Plant",
+    images: [
+      "../images/project-7- (1)..webp",
+      "../images/project-7- (2)..webp",
+    ],
+  },
+  {
+    projectName: "Fire Rated Bulletproof Glass",
+    owner: "Ministry of Sports",
+    contractor: "Nasban Group for Contracting",
+    aluminum: "NAD Systems Manufacturing Plant",
+    images: [
+      "../images/project-8- (1)..webp",
+      "../images/project-8- (2)..webp",
+      "../images/project-8- (3)..webp",
+      "../images/project-8- (4)..webp",
+      "../images/project-8- (5)..webp",
+    ],
+  },
+  {
+    projectName: "CAP1 CAP2 Shelters",
+    owner: "Ministry of Interior",
+    contractor: "North Gulf",
+    aluminum: "NAD Systems Manufacturing Plant",
+    images: [
+      "../images/project-9- (1)..webp",
+      "../images/project-9- (2)..webp",
+      "../images/project-9- (3)..webp",
+      "../images/project-9- (4)..webp",
+      "../images/project-9- (5)..webp",
+    ],
+  },
+];
+
+const projects = lang === "en" ? projectsEN : projectsAR;
 
 // set project cards
 const addProjectsCards = () => {
@@ -163,12 +300,7 @@ const addProjectsCards = () => {
     projectCard.classList.add("child", "p-2", "w-full", "md:w-4/12");
 
     const innerDiv = document.createElement("div");
-    innerDiv.classList.add(
-      "w-full",
-      "cursor-pointer",
-      "bg-white",
-      "h-full"
-    );
+    innerDiv.classList.add("w-full", "cursor-pointer", "bg-white", "h-full");
 
     innerDiv.addEventListener("click", () => openSingleModel(project));
 
@@ -179,17 +311,19 @@ const addProjectsCards = () => {
       "w-full",
       "h-[240px]"
     );
-    
+
     const image = document.createElement("img");
     image.style.objectFit = "cover";
     image.classList.add("h-full", "w-full");
     image.setAttribute("loading", "lazy");
     image.setAttribute("src", project.images[0]);
     image.setAttribute("alt", `${project["projectName"]} image`);
-    
+
     const overlay = document.createElement("div");
     overlay.classList.add(
       "overlay",
+      "text-center",
+      "px-2",
       "absolute",
       "top-0",
       "left-0",
@@ -215,7 +349,6 @@ const addProjectsCards = () => {
     projectsCards.appendChild(projectCard);
   });
 };
-
 
 addProjectsCards();
 
@@ -258,12 +391,12 @@ function openSingleModel(project) {
          </div>`;
 
       const translations = {
-        owner: "المالك",
-        contractor: "المقاول",
-        aluminum: "الألمنيوم",
+        owner: lang === "en" ? "owner" : "المالك",
+        contractor: lang === "en" ? "contractor" : "المقاول",
+        aluminum: lang === "en" ? "aluminum" : "الألمنيوم",
       };
 
-      for (const property in project) {
+      for (const property in parsedProject) {
         if (property !== "images" && property !== "projectName") {
           const propertyContainer = document.createElement("div");
           propertyContainer.classList.add("flex", "items-center", "mb-2");
@@ -275,11 +408,11 @@ function openSingleModel(project) {
             "font-semibold",
             "mr-2"
           );
-          propertyName.textContent = `${translations[property]}:`;
+          propertyName.textContent = `${translations[property] || property}:`;
 
           const propertyValue = document.createElement("p");
           propertyValue.classList.add("text-slate-700", "text-lg");
-          propertyValue.textContent = project[property];
+          propertyValue.textContent = parsedProject[property];
 
           propertyContainer.appendChild(propertyName);
           propertyContainer.appendChild(propertyValue);
@@ -311,60 +444,121 @@ function openSingleModel(project) {
   }
 }
 
-// credits
-const credits = [
+// credits ar
+const creditsAr = [
   {
     title: "إعتمادات وزارة التجارة",
     images: [
-      "images/credit-1- (1).jpg",
-      "images/credit-1- (2).jpg",
-      "images/credit-1- (3).jpg",
-      "images/credit-1- (4).jpg",
-      "images/credit-1- (5).jpg",
+      "../images/credit-1- (1).jpg",
+      "../images/credit-1- (2).jpg",
+      "../images/credit-1- (3).jpg",
+      "../images/credit-1- (4).jpg",
+      "../images/credit-1- (5).jpg",
     ],
   },
   {
     title: "إعتمادات وزارة التربية والتعليم",
-    images: ["images/credit-2- (1).jpg", "images/credit-2- (2).jpg"],
+    images: ["../images/credit-2- (1).jpg", "../images/credit-2- (2).jpg"],
   },
-  { title: "إعتمادات وزارة الداخلية", images: ["images/credit-3-(1).jpg"] },
+  { title: "إعتمادات وزارة الداخلية", images: ["../images/credit-3-(1).jpg"] },
   {
     title: "إعتمادات وزارة الصحة",
     images: [
-      "images/credit-4- (1).jpg",
-      "images/credit-4- (2).jpg",
-      "images/credit-4- (3).jpg",
-      "images/credit-4- (4).jpg",
-      "images/credit-4- (5).jpg",
-      "images/credit-4- (6).jpg",
-      "images/credit-4- (7).jpg",
-      "images/credit-4- (8).jpg",
-      "images/credit-4- (9).jpg",
-      "images/credit-4- (10).jpg",
+      "../images/credit-4- (1).jpg",
+      "../images/credit-4- (2).jpg",
+      "../images/credit-4- (3).jpg",
+      "../images/credit-4- (4).jpg",
+      "../images/credit-4- (5).jpg",
+      "../images/credit-4- (6).jpg",
+      "../images/credit-4- (7).jpg",
+      "../images/credit-4- (8).jpg",
+      "../images/credit-4- (9).jpg",
+      "../images/credit-4- (10).jpg",
     ],
   },
   {
     title: "إعتمادات شركة TBC",
     images: [
-      "images/credit-5- (1).jpg",
-      "images/credit-5- (2).jpg",
-      "images/credit-5- (3).jpg",
+      "../images/credit-5- (1).jpg",
+      "../images/credit-5- (2).jpg",
+      "../images/credit-5- (3).jpg",
     ],
   },
   {
     title: "معتمد من قبل الخدمات الطبية القوات المسلحة",
     images: [
-      "images/credit-6- (1).jpg",
-      "images/credit-6- (2).jpg",
-      "images/credit-6- (3).jpg",
-      "images/credit-6- (4).jpg",
+      "../images/credit-6- (1).jpg",
+      "../images/credit-6- (2).jpg",
+      "../images/credit-6- (3).jpg",
+      "../images/credit-6- (4).jpg",
     ],
   },
   {
     title: "إعتمادات وزارة البيئة والمياة الزراعية",
-    images: ["images/credit-7- (1).jpg", "images/credit-7- (2).jpg"],
+    images: ["../images/credit-7- (1).jpg", "../images/credit-7- (2).jpg"],
   },
 ];
+
+// credits en
+const creditsEn = [
+  {
+    title: "Ministry of Commerce Approvals",
+    images: [
+      "../images/credit-1- (1).jpg",
+      "../images/credit-1- (2).jpg",
+      "../images/credit-1- (3).jpg",
+      "../images/credit-1- (4).jpg",
+      "../images/credit-1- (5).jpg",
+    ],
+  },
+  {
+    title: "Ministry of Education Approvals",
+    images: ["../images/credit-2- (1).jpg", "../images/credit-2- (2).jpg"],
+  },
+  {
+    title: "Ministry of Interior Approvals",
+    images: ["../images/credit-3-(1).jpg"],
+  },
+  {
+    title: "Ministry of Health Approvals",
+    images: [
+      "../images/credit-4- (1).jpg",
+      "../images/credit-4- (2).jpg",
+      "../images/credit-4- (3).jpg",
+      "../images/credit-4- (4).jpg",
+      "../images/credit-4- (5).jpg",
+      "../images/credit-4- (6).jpg",
+      "../images/credit-4- (7).jpg",
+      "../images/credit-4- (8).jpg",
+      "../images/credit-4- (9).jpg",
+      "../images/credit-4- (10).jpg",
+    ],
+  },
+  {
+    title: "TBC Company Approvals",
+    images: [
+      "../images/credit-5- (1).jpg",
+      "../images/credit-5- (2).jpg",
+      "../images/credit-5- (3).jpg",
+    ],
+  },
+  {
+    title: "Approved by the Armed Forces Medical Services",
+    images: [
+      "../images/credit-6- (1).jpg",
+      "../images/credit-6- (2).jpg",
+      "../images/credit-6- (3).jpg",
+      "../images/credit-6- (4).jpg",
+    ],
+  },
+  {
+    title: "Ministry of Environment, Water, and Agriculture Approvals",
+    images: ["../images/credit-7- (1).jpg", "../images/credit-7- (2).jpg"],
+  },
+];
+
+const credits = lang === "en" ? creditsEn : creditsAr
+
 
 // set credits cards
 const addCreditsCards = () => {
@@ -394,7 +588,12 @@ const addCreditsCards = () => {
     innerDiv.addEventListener("click", () => openSingleCreditModel(credit));
 
     const creditCardImageDiv = document.createElement("div");
-    creditCardImageDiv.classList.add("credit-card-image", "relative", "w-full", "h-[240px]");
+    creditCardImageDiv.classList.add(
+      "credit-card-image",
+      "relative",
+      "w-full",
+      "h-[240px]"
+    );
 
     const creditCardImage = document.createElement("img");
     creditCardImage.setAttribute("src", credit.images[0]);
@@ -432,7 +631,6 @@ const addCreditsCards = () => {
     creditsCards.appendChild(creditCard);
   });
 };
-
 
 addCreditsCards();
 
@@ -494,35 +692,131 @@ function closeSingleModel() {
   singelModel.classList.add("hidden");
   singelModel.classList.remove("block");
 }
+
 // partners data
 const partnersData = [
-  "images/partners- (1).png",
-  "images/partners- (2).png",
-  "images/partners- (3).png",
-  "images/partners- (4).png",
-  "images/partners- (5).png",
-  "images/partners- (6).png",
-  "images/partners- (7).png",
-  "images/partners- (8).png",
-  "images/partners- (9).png",
-  "images/partners- (10).png",
-  "images/partners- (11).png",
-  "images/partners- (12).png",
+  "../images/partners- (1).png",
+  "../images/partners- (2).png",
+  "../images/partners- (3).png",
+  "../images/partners- (4).png",
+  "../images/partners- (5).png",
+  "../images/partners- (6).png",
+  "../images/partners- (7).png",
+  "../images/partners- (8).png",
+  "../images/partners- (9).png",
+  "../images/partners- (10).png",
+  "../images/partners- (11).png",
+  "../images/partners- (12).png",
 ];
 
 // set partners cards
 const setPartnersCards = () => {
-  partnersData.map(
-    (partner) =>
-      (partnersCards.innerHTML += `
-            <div
-              data-aos="fade-up"
-              data-aos-duration="1500"
-              class="child p-2 w-6/12 md:w-3/12 lg:w-3/12">
-            <div class="w-full flex justify-center">
-              <img loading="lazy" class="w-[130px] h-[130px]" src="${partner}" alt="Nad trusted partner">
-              </div>
-            </div>`)
-  );
+  partnersCards.innerHTML += `
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            ${partnersData.map(
+              (partner) =>
+                `<div class="swiper-slide">
+                   <div class="flex justify-center"><img loading="lazy" class="h-[90px]" src="${partner}" alt=""></div>
+            </div>`
+            )}   
+          </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>            
+        </div>`;
+
+  new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+    },
+  });
 };
+
 setPartnersCards();
+
+// Function to redirect based on URL
+function redirectBasedOnLanguage() {
+  // Check if the current URL is nadfactory.sa
+  if (window.location.hostname === "nadfactory.sa") {
+    // Redirect to nadfactory.sa/ar/index.html
+    window.location.href = "https://nadfactory.sa/ar/index.html";
+  }
+}
+
+// Call the function when the script loads
+redirectBasedOnLanguage();
+
+// send email form
+function sendEmailForm(event) {
+  event.preventDefault();
+
+  const formAlert = document.querySelector(".alert");
+
+  const successMessage =
+    lang === "en" ? "Data sent successfully" : "تم ارسال البيانات بنجاح";
+  const errorMessage =
+    lang === "en" ? "Please try again" : "برجاء التجربة مرة اخري";
+
+  var formData = {
+    from_name: document.getElementById("name").value,
+    to_name: "yousef",
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    companyName: document.getElementById("companyName").value,
+    message: document.getElementById("message").value,
+  };
+
+  emailjs.send("service_vk540no", "template_fcsfycd", formData).then(
+    (response) => {
+      // Show the alert immediately
+      formAlert.innerHTML = `
+        <i class="fa-regular fa-circle-check me-3"></i>
+        ${successMessage}
+      `;
+      formAlert.classList.add("block", "bg-green-800");
+      formAlert.classList.remove("hidden");
+
+      // Set another timeout to remove the alert after 5 seconds
+      setTimeout(() => {
+        formAlert.innerHTML = ""; // Clear the content
+        formAlert.classList.remove("block", "bg-green-800");
+        formAlert.classList.add("hidden");
+      }, 5000); // 5000 milliseconds = 5 seconds
+    },
+    (error) => {
+      // Show the alert immediately
+      formAlert.innerHTML = `
+        <i class="fa-regular fa-circle-check me-3"></i>
+        ${errorMessage}
+      `;
+      formAlert.classList.add("block", "bg-green-800");
+      formAlert.classList.remove("hidden");
+
+      // Set another timeout to remove the alert after 5 seconds
+      setTimeout(() => {
+        formAlert.innerHTML = ""; // Clear the content
+        formAlert.classList.remove("block", "bg-green-800");
+        formAlert.classList.add("hidden");
+      }, 5000); // 5000 milliseconds = 5 seconds
+    }
+  );
+}

@@ -8,11 +8,15 @@
   --gray-color: #222c35;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .credit-swiper-btn {
   position: fixed !important;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: var(--red-color)!important;
+  color: var(--red-color) !important;
 }
