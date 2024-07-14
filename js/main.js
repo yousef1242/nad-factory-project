@@ -755,7 +755,9 @@ setPartnersCards();
 // Function to redirect based on URL
 function redirectBasedOnLanguage() {
   // Check if the current URL is nadfactory.sa
-  if (window.location.hostname === "nadfactory.sa") {
+  const url = window.location.href;
+  if (!url.includes("ar") || !url.includes("en")) {
+    console.log("error");
     // Redirect to nadfactory.sa/ar/index.html
     window.location.href = "https://nadfactory.sa/ar/index.html";
   }
