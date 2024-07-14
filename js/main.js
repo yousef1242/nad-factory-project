@@ -63,12 +63,12 @@ const projectsAR = [
     contractor: "الراجحي للتعمير",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "../images/project-1- (1)..webp",
-      "../images/project-1- (2)..webp",
-      "../images/project-1- (3)..webp",
-      "../images/project-1- (4)..webp",
-      "../images/project-1- (5)..webp",
-      "../images/project-1- (6)..webp",
+      "./images/project-1- (1)..webp",
+      "./images/project-1- (2)..webp",
+      "./images/project-1- (3)..webp",
+      "./images/project-1- (4)..webp",
+      "./images/project-1- (5)..webp",
+      "./images/project-1- (6)..webp",
     ],
   },
   {
@@ -77,10 +77,10 @@ const projectsAR = [
     contractor: "الراجحي للتعمير",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "../images/project-2- (1)..webp",
-      "../images/project-2- (2)..webp",
-      "../images/project-2- (3)..webp",
-      "../images/project-2- (4)..webp",
+      "./images/project-2- (1)..webp",
+      "./images/project-2- (2)..webp",
+      "./images/project-2- (3)..webp",
+      "./images/project-2- (4)..webp",
     ],
   },
   {
@@ -89,10 +89,10 @@ const projectsAR = [
     contractor: "الراجحي للتعمير",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "../images/project-3- (1)..webp",
-      "../images/project-3- (2)..webp",
-      "../images/project-3- (3)..webp",
-      "../images/project-3- (4)..webp",
+      "./images/project-3- (2)..webp",
+      "./images/project-3- (1)..webp",
+      "./images/project-3- (3)..webp",
+      "./images/project-3- (4)..webp",
     ],
   },
   {
@@ -101,12 +101,12 @@ const projectsAR = [
     contractor: "الراجحي للتعمير",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "../images/project-4- (1)..webp",
-      "../images/project-4- (2)..webp",
-      "../images/project-4- (3)..webp",
-      "../images/project-4- (4)..webp",
-      "../images/project-4- (5)..webp",
-      "../images/project-4- (6)..webp",
+      "./images/project-4- (1)..webp",
+      "./images/project-4- (2)..webp",
+      "./images/project-4- (3)..webp",
+      "./images/project-4- (4)..webp",
+      "./images/project-4- (5)..webp",
+      "./images/project-4- (6)..webp",
     ],
   },
   {
@@ -115,12 +115,12 @@ const projectsAR = [
     contractor: "الراجحي للتعمير",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "../images/project-5- (1)..webp",
-      "../images/project-5- (2)..webp",
-      "../images/project-5- (3)..webp",
-      "../images/project-5- (4)..webp",
-      "../images/project-5- (5)..webp",
-      "../images/project-5- (6)..webp",
+      "./images/project-5- (1)..webp",
+      "./images/project-5- (2)..webp",
+      "./images/project-5- (3)..webp",
+      "./images/project-5- (4)..webp",
+      "./images/project-5- (5)..webp",
+      "./images/project-5- (6)..webp",
     ],
   },
   {
@@ -129,9 +129,9 @@ const projectsAR = [
     contractor: "شركة عبدالله السيد للمقاولات العامة",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "../images/project-6- (1)..webp",
-      "../images/project-6- (2)..webp",
-      "../images/project-6- (3)..webp",
+      "./images/project-6- (1)..webp",
+      "./images/project-6- (2)..webp",
+      "./images/project-6- (3)..webp",
     ],
   },
   {
@@ -140,8 +140,8 @@ const projectsAR = [
     contractor: "الشايعي للمقاولات",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "../images/project-7- (1)..webp",
-      "../images/project-7- (2)..webp",
+      "./images/project-7- (1)..webp",
+      "./images/project-7- (2)..webp",
     ],
   },
   {
@@ -150,11 +150,11 @@ const projectsAR = [
     contractor: "مجموعة النصبان للمقاولات",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "../images/project-8- (1)..webp",
-      "../images/project-8- (2)..webp",
-      "../images/project-8- (3)..webp",
-      "../images/project-8- (4)..webp",
-      "../images/project-8- (5)..webp",
+      "./images/project-8- (1)..webp",
+      "./images/project-8- (2)..webp",
+      "./images/project-8- (3)..webp",
+      "./images/project-8- (4)..webp",
+      "./images/project-8- (5)..webp",
     ],
   },
   {
@@ -163,11 +163,11 @@ const projectsAR = [
     contractor: "شمال الخليج",
     aluminum: "مصنع أنظمة ناد للصناعة",
     images: [
-      "../images/project-9- (1)..webp",
-      "../images/project-9- (2)..webp",
-      "../images/project-9- (3)..webp",
-      "../images/project-9- (4)..webp",
-      "../images/project-9- (5)..webp",
+      "./images/project-9- (2)..webp",
+      "./images/project-9- (1)..webp",
+      "./images/project-9- (3)..webp",
+      "./images/project-9- (4)..webp",
+      "./images/project-9- (5)..webp",
     ],
   },
 ];
@@ -449,53 +449,53 @@ const creditsAr = [
   {
     title: "إعتمادات وزارة التجارة",
     images: [
-      "../images/credit-1- (1).jpg",
-      "../images/credit-1- (2).jpg",
-      "../images/credit-1- (3).jpg",
-      "../images/credit-1- (4).jpg",
-      "../images/credit-1- (5).jpg",
+      "./images/credit-1- (1).jpg",
+      "./images/credit-1- (2).jpg",
+      "./images/credit-1- (3).jpg",
+      "./images/credit-1- (4).jpg",
+      "./images/credit-1- (5).jpg",
     ],
   },
   {
     title: "إعتمادات وزارة التربية والتعليم",
-    images: ["../images/credit-2- (1).jpg", "../images/credit-2- (2).jpg"],
+    images: ["./images/credit-2- (1).jpg", "./images/credit-2- (2).jpg"],
   },
-  { title: "إعتمادات وزارة الداخلية", images: ["../images/credit-3-(1).jpg"] },
+  { title: "إعتمادات وزارة الداخلية", images: ["./images/credit-3-(1).jpg"] },
   {
-    title: "إعتمادات وزارة الصحة",
+    title: "إعتمادات وزارة الصشة",
     images: [
-      "../images/credit-4- (1).jpg",
-      "../images/credit-4- (2).jpg",
-      "../images/credit-4- (3).jpg",
-      "../images/credit-4- (4).jpg",
-      "../images/credit-4- (5).jpg",
-      "../images/credit-4- (6).jpg",
-      "../images/credit-4- (7).jpg",
-      "../images/credit-4- (8).jpg",
-      "../images/credit-4- (9).jpg",
-      "../images/credit-4- (10).jpg",
+      "./images/credit-4- (2).jpg",
+      "./images/credit-4- (3).jpg",
+      "./images/credit-4- (1).jpg",
+      "./images/credit-4- (4).jpg",
+      "./images/credit-4- (5).jpg",
+      "./images/credit-4- (6).jpg",
+      "./images/credit-4- (7).jpg",
+      "./images/credit-4- (8).jpg",
+      "./images/credit-4- (9).jpg",
+      "./images/credit-4- (10).jpg",
     ],
   },
   {
     title: "إعتمادات شركة TBC",
     images: [
-      "../images/credit-5- (1).jpg",
-      "../images/credit-5- (2).jpg",
-      "../images/credit-5- (3).jpg",
+      "./images/credit-5- (1).jpg",
+      "./images/credit-5- (2).jpg",
+      "./images/credit-5- (3).jpg",
     ],
   },
   {
     title: "معتمد من قبل الخدمات الطبية القوات المسلحة",
     images: [
-      "../images/credit-6- (1).jpg",
-      "../images/credit-6- (2).jpg",
-      "../images/credit-6- (3).jpg",
-      "../images/credit-6- (4).jpg",
+      "./images/credit-6- (1).jpg",
+      "./images/credit-6- (2).jpg",
+      "./images/credit-6- (3).jpg",
+      "./images/credit-6- (4).jpg",
     ],
   },
   {
     title: "إعتمادات وزارة البيئة والمياة الزراعية",
-    images: ["../images/credit-7- (1).jpg", "../images/credit-7- (2).jpg"],
+    images: ["./images/credit-7- (1).jpg", "./images/credit-7- (2).jpg"],
   },
 ];
 
@@ -557,7 +557,7 @@ const creditsEn = [
   },
 ];
 
-const credits = lang === "en" ? creditsEn : creditsAr
+const credits = lang === "en" ? creditsEn : creditsAr;
 
 
 // set credits cards
@@ -693,8 +693,24 @@ function closeSingleModel() {
   singelModel.classList.remove("block");
 }
 
-// partners data
-const partnersData = [
+// partners data ar
+const partnersAr = [
+  "./images/partners- (1).png",
+  "./images/partners- (2).png",
+  "./images/partners- (3).png",
+  "./images/partners- (4).png",
+  "./images/partners- (5).png",
+  "./images/partners- (6).png",
+  "./images/partners- (7).png",
+  "./images/partners- (8).png",
+  "./images/partners- (9).png",
+  "./images/partners- (10).png",
+  "./images/partners- (11).png",
+  "./images/partners- (12).png",
+];
+
+// partners data en
+const partnersEn = [
   "../images/partners- (1).png",
   "../images/partners- (2).png",
   "../images/partners- (3).png",
@@ -709,12 +725,14 @@ const partnersData = [
   "../images/partners- (12).png",
 ];
 
+const partners = lang === "en" ? partnersEn : partnersAr;
+
 // set partners cards
 const setPartnersCards = () => {
   partnersCards.innerHTML += `
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            ${partnersData.map(
+            ${partners.map(
               (partner) =>
                 `<div class="swiper-slide">
                    <div class="flex justify-center"><img loading="lazy" class="h-[90px]" src="${partner}" alt=""></div>
@@ -751,20 +769,6 @@ const setPartnersCards = () => {
 };
 
 setPartnersCards();
-
-// Function to redirect based on URL
-function redirectBasedOnLanguage() {
-  // Check if the current URL is nadfactory.sa
-  const url = window.location.href;
-  if (!url.includes("ar") || !url.includes("en")) {
-    console.log("error");
-    // Redirect to nadfactory.sa/ar/index.html
-    window.location.href = "https://nadfactory.sa/ar/index.html";
-  }
-}
-
-// Call the function when the script loads
-redirectBasedOnLanguage();
 
 // send email form
 function sendEmailForm(event) {
