@@ -791,7 +791,7 @@ function sendEmailForm(event) {
     message: document.getElementById("message").value,
   };
 
-  emailjs.send("service_vk540no", "template_fcsfycd", formData).then(
+  emailjs.send("service_6t5w8vx", "template_38ew9fm", formData).then(
     (response) => {
       // Show the alert immediately
       formAlert.innerHTML = `
