@@ -139,10 +139,7 @@ const projectsAR = [
     owner: "وزارة التجارة",
     contractor: "الشايعي للمقاولات",
     aluminum: "مصنع أنظمة ناد للصناعة",
-    images: [
-      "./images/project-7- (1)..webp",
-      "./images/project-7- (2)..webp",
-    ],
+    images: ["./images/project-7- (1)..webp", "./images/project-7- (2)..webp"],
   },
   {
     projectName: "زجاج فاير ريتد مضاد للرصاص",
@@ -559,7 +556,6 @@ const creditsEn = [
 
 const credits = lang === "en" ? creditsEn : creditsAr;
 
-
 // set credits cards
 const addCreditsCards = () => {
   credits.forEach((credit) => {
@@ -783,7 +779,6 @@ function sendEmailForm(event) {
 
   var formData = {
     from_name: document.getElementById("name").value,
-    to_name: "yousef",
     name: document.getElementById("name").value,
     email: document.getElementById("email").value,
     phone: document.getElementById("phone").value,
@@ -793,6 +788,13 @@ function sendEmailForm(event) {
 
   emailjs.send("service_6t5w8vx", "template_38ew9fm", formData).then(
     (response) => {
+      // empty the inputs
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("companyName").value = "";
+      document.getElementById("phone").value = "";
+      document.getElementById("message").value = "";
+
       // Show the alert immediately
       formAlert.innerHTML = `
         <i class="fa-regular fa-circle-check me-3"></i>
@@ -809,18 +811,25 @@ function sendEmailForm(event) {
       }, 5000); // 5000 milliseconds = 5 seconds
     },
     (error) => {
+      // empty the inputs
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("companyName").value = "";
+      document.getElementById("phone").value = "";
+      document.getElementById("message").value = "";
+
       // Show the alert immediately
       formAlert.innerHTML = `
         <i class="fa-regular fa-circle-check me-3"></i>
         ${errorMessage}
       `;
-      formAlert.classList.add("block", "bg-green-800");
+      formAlert.classList.add("block", "bg-red-800");
       formAlert.classList.remove("hidden");
 
       // Set another timeout to remove the alert after 5 seconds
       setTimeout(() => {
         formAlert.innerHTML = ""; // Clear the content
-        formAlert.classList.remove("block", "bg-green-800");
+        formAlert.classList.remove("block", "bg-red-800");
         formAlert.classList.add("hidden");
       }, 5000); // 5000 milliseconds = 5 seconds
     }
